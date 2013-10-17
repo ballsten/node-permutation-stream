@@ -15,7 +15,7 @@ var ps = require('permutation-stream');
 var es = require('event-stream');
 
 var s = permutationStream.createPermutationStream();
-es.readArray(["hello", "world"]).pipe(process.stdout);
+es.readArray(["hello", "world"]).pipe(s).pipe(process.stdout);
 
 > hello
 > world
