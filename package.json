@@ -1,0 +1,22 @@
+{
+  "name": "node-permutation-stream",
+  "version": "0.0.1",
+  "description": "Stream to create permutations",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rockinghorse/node-permutation-stream"
+  },
+  "keywords": [
+    "permutation",
+    "stream"
+  ],
+  "author": "Andrew Theaker <andrew@theaker.name>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rockinghorse/node-permutation-stream/issues"
+  }
+}
