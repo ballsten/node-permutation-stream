@@ -1,0 +1,3 @@
+exports.createPermutationStream = function createPermutationStream() {
+  
+}
