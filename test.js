@@ -8,7 +8,8 @@ describe('permutation streams', function() {
     var s = ps.createPermutationStream();
     es.readArray(["hello", "world"]).pipe(s).pipe(es.writeArray(function(err, data) {
       var expected = [ "hello", "world", "helloworld", "worldhello"];
-      expect(data.sort).to.eql(expected.sort());
+      expect(data.sort()).to.eql(expected.sort());
+      done();
     }));
   });
 });
