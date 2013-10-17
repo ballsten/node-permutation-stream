@@ -22,7 +22,6 @@
   "devDependencies": {
     "chai": "~1.8.1",
     "mocha": "~1.13.0",
-    "event-stream": "~3.0.16",
-    "concat": "~0.2.4"
+    "event-stream": "~3.0.16"
   }
 }
