@@ -1,7 +1,7 @@
 {
-  "name": "node-permutation-stream",
+  "name": "permutation-stream",
   "version": "0.0.1",
-  "description": "Stream to create permutations",
+  "description": "permutate an input stream",
   "main": "index.js",
   "scripts": {
     "test": "mocha test.js"
@@ -21,7 +21,10 @@
   },
   "devDependencies": {
     "chai": "~1.8.1",
-    "mocha": "~1.13.0",
-    "event-stream": "~3.0.16"
+    "mocha": "~1.13.0"
+  },
+  "dependencies": {
+    "event-stream": "~3.0.16",
+    "async": "~0.2.9"
   }
 }

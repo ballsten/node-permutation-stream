@@ -7,7 +7,7 @@ describe('permutation streams', function() {
   it('should return all permutations', function(done) {
     var s = ps.createPermutationStream();
     es.readArray(["hello", "world"]).pipe(s).pipe(es.writeArray(function(err, data) {
-      var expected = [ ["hello"], ["world"], ["hello", "world"], ["world", "hello"] ];
+      var expected = [ [], ["hello"], ["world"], ["hello", "world"], ["world", "hello"] ];
       expect(data.sort()).to.eql(expected.sort());
       done();
     }));
