@@ -1,24 +1,30 @@
 node-permutation-stream
 =======================
 
-Stream to create permutations
+Create a stream of permutations
 
 API
 ===
 
-createPermutationStream([min])
+createPermutationStream(data[, opts])
 -------------------------
-Returns all permutations of at least min length
+Creates a stream of permutations of the data array. Arrays are emitted by the stream.
+
+#### opts
+- repitition - do values repeat (default: false)
+- min - minimum numbers of items in the output (default: 0)
+- max - maximum number of items to output (default: data.length-1)
 
 ```javascript
 var ps = require('permutation-stream');
 var es = require('event-stream');
 
-var s = permutationStream.createPermutationStream();
-es.readArray(["hello", "world"]).pipe(s).pipe(process.stdout);
+var s = ps.createPermutationStream(['hello', 'world']);
+s.pipe(process.stdout);
 
-> hello
-> world
-> helloworld
-> worldhello
+> []
+> ["hello"]
+> ["world"]
+> ["hello","world"]
+> ["world","hello"]
 ```
