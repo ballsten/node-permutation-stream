@@ -5,8 +5,8 @@ var ps = require('./index');
 
 describe('permutation streams', function() {
   it('should return all permutations for two words', function(done) {
-    var s = ps.createPermutationStream();
-    es.readArray(["hello", "world"]).pipe(s).pipe(es.writeArray(function(err, data) {
+    var s = ps.createPermutationStream(["hello", "world"]);
+    s.pipe(es.writeArray(function(err, data) {
       var expected = [ [], ["hello"], ["world"], ["hello", "world"], ["world", "hello"] ];
       expect(data.sort()).to.eql(expected.sort());
       done();
@@ -14,8 +14,8 @@ describe('permutation streams', function() {
   });
 
   it('should return all permutations for 3 words', function(done) {
-    var s = ps.createPermutationStream();
-    es.readArray(["hello", "world", "one" ]).pipe(s).pipe(es.writeArray(function(err, data) {
+    var s = ps.createPermutationStream(["hello", "world", "one" ]);
+    s.pipe(es.writeArray(function(err, data) {
       var expected = [ [], 
         ["hello"], ["world"], ["one"],
         ["hello", "world"], ["hello", "one"],
