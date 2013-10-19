@@ -1,14 +1,16 @@
 var es = require('event-stream');
+var extend = require('extend');
 var async = require('async');
 
-exports.createPermutationStream = function createPermutationStream() {
+exports.createPermutationStream = function createPermutationStream(data, opts) {
+  opts = extend(opts || {}, { min: 0, max: data.length, repitition: false });
   var output = es.through();
 
-  var input = es.split().pipe(es.writeArray(function(err, data) {
+  process.nextTick(function() {
     permutate(data, 0, write, end);
-  }));
+  });
   
-  return es.duplex(input, output);
+  return output;
 
   function write(data) {
     output.write(data);
