@@ -13,7 +13,7 @@ Creates a stream of permutations of the data array. Arrays are emitted by the st
 #### opts
 - repitition - repeat values (default: false)
 - min - minimum numbers of items in the output (default: 0)
-- max - maximum number of items to output (default: data.length-1)
+- max - maximum number of items to output (default: data.length)
 
 ```javascript
 var ps = require('permutation-stream');
