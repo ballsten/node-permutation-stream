@@ -3,7 +3,7 @@ var es = require('event-stream');
 
 var ps = require('./index');
 
-describe('permutation streams', function() {
+describe('permutation streams with default options', function() {
   it('should return all permutations for two words', function(done) {
     var s = ps.createPermutationStream(["hello", "world"]);
     s.pipe(es.writeArray(function(err, data) {
@@ -29,4 +29,10 @@ describe('permutation streams', function() {
       done();
     }));
   });
+});
+
+describe('permutations streams with min/max options', function() {
+  it('should return all permutations with 2 or more items');
+  it('should return all permutations with 2 or less items');
+  it('should return all permutations with between items');
 });
