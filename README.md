@@ -11,7 +11,6 @@ createPermutationStream(data[, opts])
 Creates a stream of permutations of the data array. Arrays are emitted by the stream.
 
 #### opts
-- repitition - repeat values (default: false) - TODO
 - min - minimum numbers of items in the output (default: 0)
 - max - maximum number of items to output (default: data.length)
 

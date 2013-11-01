@@ -3,7 +3,7 @@ var extend = require('extend');
 var async = require('async');
 
 exports.createPermutationStream = function createPermutationStream(data, opts) {
-  opts = extend({ min: 0, max: data.length, repitition: false }, opts);
+  opts = extend({ min: 0, max: data.length}, opts);
   var output = es.through();
 
   process.nextTick(function() {
