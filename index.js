@@ -19,7 +19,7 @@ exports.createPermutationStream = function createPermutationStream(data, opts) {
   function end() {
     output.write(null);
   }
-}
+};
 
 function permutate(list, i, emit, done) {
   emit(list.slice(0,i));
@@ -30,11 +30,12 @@ function permutate(list, i, emit, done) {
     var j = i;
     async.whilst(
       function() { 
-        return j < list.length 
+        return j < list.length;
       },
       function(cb) {
         var l = list.slice();
-        l[i] = list[j], l[j] = list[i];
+        l[i] = list[j];
+        l[j] = list[i];
         j++;
         permutate(l, i+1, emit, cb);
       },
