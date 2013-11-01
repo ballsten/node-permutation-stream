@@ -1,6 +1,6 @@
 {
   "name": "permutation-stream",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "permutate an input stream",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,8 @@
   },
   "keywords": [
     "permutation",
-    "stream"
+    "stream",
+    "permutate"
   ],
   "author": "Andrew Theaker <andrew@theaker.name>",
   "license": "MIT",
